@@ -1,45 +1,46 @@
-import { useState } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './landing.css'
+import Page from './Page'
+import Content from './Content'
+import Service from './Service';
+import Marquees from './Marquee';
+import Insight from './Insight';
+import Footer from './Footer';
+import Footergrid from './Footergrid';
+import Feature from './Feature';
 
-const App = () => {
-  const [count, setCount] = useState(0);
 
+function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Vite + React</h1>
-        <p>
-          <button onClick={() => setCount(count => count + 1)}>
-            count is {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://react.dev"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+    <div>
+      <div>
+        <Page />
+      </div>
+      <div>
+        <Content />
+      </div>
+      <div>
+        <Service />
+      </div>
+      <div className="marquee-class">
+        <Feature />
+      </div>
+      <div className="marquee-class">
+        <Marquees />
+      </div>
+      <div>
+        <Insight />
+      </div>
+      <div className='footerfooter'>
+        <Footer />
+        <Footergrid />
+        <div style={{padding : '20px',backgroundColor : 'black',color : 'white',fontSize : '12px'}}>
+          <div>&copy;2023 All Rights reserved  <span style={{float: 'right'}}>Privacy Policy</span></div>
+        </div>
+      </div>
     </div>
   );
-};
+}
 
-export default App;
+export default App
+
